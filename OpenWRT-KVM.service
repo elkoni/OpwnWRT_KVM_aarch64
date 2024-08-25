@@ -16,7 +16,8 @@ ExecStart=/usr/bin/qemu-system-aarch64 -enable-kvm -m 156M -smp 2 \
 -netdev tap,id=eth0,ifname=tap0,vhost=on,script=no,downscript=no \
 -device virtio-net-pci,netdev=eth0,mac=ba:ad:1d:00:10:20 \
 -serial unix:console.sock,server,nowait \
--monitor unix:monitor.sock,server,nowait
+-monitor unix:monitor.sock,server,nowait \
+-qmp unix:qmp.sock,server,nowait
 
 ExecReload=/bin/kill -HUP $MAINPID
 
