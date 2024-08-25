@@ -8,7 +8,7 @@ User=qemu
 WorkingDirectory=/stuff/vm
 ExecStart=/usr/bin/qemu-system-aarch64 -enable-kvm -m 156M -smp 2 \
 -cpu host -M virt -nographic \
--kernel <kernel_image> \
+-kernel generic-kernel.bin \
 -append "root=fe00" \
 -blockdev driver=host_device,node-name=hosthdd0,cache.direct=on,filename="/dev/disk/by-id/<partition_id>" \
 -blockdev driver=raw,node-name=hd0,file=hosthdd0 \
