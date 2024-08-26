@@ -6,7 +6,7 @@ After=networking.service
 Type=simple
 User=qemu
 WorkingDirectory=/stuff/vm
-ExecStart=/usr/bin/qemu-system-aarch64 -enable-kvm -m 156M -smp 2 \
+ExecStart=/usr/bin/qemu-system-aarch64 -enable-kvm -m 256M -smp 2 \
 -cpu host -M virt -nographic \
 -kernel generic-kernel.bin \
 -append "root=fe00" \
