@@ -20,7 +20,13 @@ Patches about I2S3 audio output are included too.
   
   Create a disk partition of size 512M - 1G. Note a partition id under the /dev/disk/by-id/ .  
   Block copy the uncompressed image to this partition.  
-  ``` dd if=openwrt-23.05.4-armsr-armv8-generic-ext4-rootfs.img of=</dev/disk/by-id/<partition_id bs=1M oflag=direct status=progress ```  
+  ``` $ dd if=openwrt-23.05.4-armsr-armv8-generic-ext4-rootfs.img of=</dev/disk/by-id/<partition_id bs=1M oflag=direct status=progress ```  
+  The rootfs is about 100M. It needs to fit a partition.  
+  ``` $ resize2fs /dev/disk/by-id/<partition_id> ```  
+  Create soft link for a kernel.  
+  ``` ln -s openwrt-23.05.4-armsr-armv8-generic-kernel.bin generic-kernel.bin ```  
+  Test it with:  
+  ```
   
   
   
