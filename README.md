@@ -33,7 +33,6 @@ Patches about I2S3 audio output are included too.
 -append "root=fe00" \
 -blockdev driver=host_device,node-name=hosthdd0,cache.direct=on,filename="/dev/disk/by-id/<partition_id>" \
 -blockdev driver=raw,node-name=hd0,file=hosthdd0 \
--device virtio-blk-pci,drive=hd0 \
--serial unix:console.sock,server,nowait
+-device virtio-blk-pci,drive=hd0
 ```
 
