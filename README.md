@@ -26,7 +26,7 @@ Patches about I2S3 audio output are included too.
   Create soft link for a kernel.  
   ``` ln -s openwrt-23.05.4-armsr-armv8-generic-kernel.bin generic-kernel.bin ```  
   Test it with:  
-  ``` /usr/bin/qemu-system-aarch64 -enable-kvm -m 256M -smp 2 \
+  ``` qemu-system-aarch64 -enable-kvm -m 256M -smp 2 \
 -cpu host -M virt -nographic \
 -kernel generic-kernel.bin \
 -append "root=fe00" \
@@ -39,5 +39,5 @@ Patches about I2S3 audio output are included too.
   
   
   
-    .. tbc ..
+
     
