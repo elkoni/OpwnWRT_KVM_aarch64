@@ -13,6 +13,11 @@ Patches about I2S3 audio output are included too.
   Check OpenWrt release https://downloads.openwrt.org/releases/23.05.3/targets/armsr/armv8/  
   There are two files needed - generic-kernel.bin ( kernel image ) and  
   generic-ext4-rootfs.img.gz ( root filesystem ). Wget it both.  
-
+  Exact names are "openwrt-23.05.4-armsr-armv8-generic-kernel.bin" and  
+  "openwrt-23.05.4-armsr-armv8-generic-ext4-rootfs.img.gz" .  
+  Gunzip the second one.  
+  ... $ gunzip openwrt-23.05.4-armsr-armv8-generic-ext4-rootfs.img.gz ...
+  
+  
     .. tbc ..
     
