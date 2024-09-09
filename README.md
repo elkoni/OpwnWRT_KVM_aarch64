@@ -16,7 +16,13 @@ Patches about I2S3 audio output are included too.
   Exact names are "openwrt-23.05.4-armsr-armv8-generic-kernel.bin" and  
   "openwrt-23.05.4-armsr-armv8-generic-ext4-rootfs.img.gz" .  
   Gunzip the second one.  
-  ``` $ gunzip openwrt-23.05.4-armsr-armv8-generic-ext4-rootfs.img.gz ```
+  ``` $ gunzip openwrt-23.05.4-armsr-armv8-generic-ext4-rootfs.img.gz ```  
+  
+  Create a disk partition of size 512M - 1G. Note a partition id under the /dev/disk/by-id/ .  
+  Block copy the uncompressed image to this partition.  
+  ``` dd if=openwrt-23.05.4-armsr-armv8-generic-ext4-rootfs.img of=</dev/disk/by-id/<partition_id bs=1M oflag=direct status=progress ```  
+  
+  
   
   
     .. tbc ..
